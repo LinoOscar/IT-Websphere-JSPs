@@ -1,8 +1,8 @@
 <%--
-  Document : ftpSN3.jsp
+  Document : ws4IT.jsp
   Created on : 2014
   Author : Er Lino
-  Utilidad: todos los beans, modificar valores y llamar ops
+  Utilidad: WS tester
  --%>
  
 <%@page contentType="text/html; charset=ISO-8859-1"%>
@@ -34,7 +34,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
-<title>SN3 WS</title>
+<title>WS Tester</title>
 
 
 	

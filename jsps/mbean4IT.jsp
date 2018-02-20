@@ -1,8 +1,8 @@
 <%--
-  Document : mbeanSN3.jsp
+  Document : mbean4IT.jsp
   Created on : 2014
   Author : Er Lino
-  Utilidad: todos los beans, modificar valores y llamar ops
+  Utilidad: mbeans
  --%>
 
 <%@ page import="java.util.*" %>
@@ -17,7 +17,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>SN3 MBEANS</title>
+<title>MBEANS Tester</title>
 <style type="text/css"> 
 body {
 	font: normal .8em/1.5em Arial, Helvetica, sans-serif;

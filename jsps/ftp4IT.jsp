@@ -1,8 +1,8 @@
 <%--
-  Document : ftpSN3.jsp
+  Document : ftp4IT.jsp
   Created on : 2014
-  Author : Er Lino
-  Utilidad: todos los beans, modificar valores y llamar ops
+  Author : Tito Lino
+  Utilidad: ftp tester
  --%>
  
  <%@ page import="org.apache.commons.net.ftp.FTPClient" %>
@@ -14,7 +14,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
-<title>SN3 FTP</title>
+<title>FTP Tester</title>
 
 
 	

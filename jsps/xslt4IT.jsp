@@ -1,7 +1,7 @@
 <%--
-  Document : sn3Xslt.jsp
+  Document : xslt4IT.jsp
   Created on : 2015
-  Author : Er Lino
+  Author : Tito Lino
   Utilidad: Transformar
    
  --%>
@@ -38,7 +38,6 @@
 <%@ page import="org.apache.log4j.Logger" %>
 <%@ page import="org.apache.log4j.PatternLayout" %>
 <%@ page import="org.apache.log4j.RollingFileAppender" %>
-<%@ page import="com.isb.rigel.common.util.StreamUtil" %>
 <%@ page import="java.net.URL" %>
 <%@ page import="java.net.URLClassLoader" %>
 <%@ page import="java.util.Enumeration" %>
@@ -63,7 +62,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	
-<title>SN3 XSLT</title>
+<title>XSLT Test</title>
 
 
 	
@@ -534,7 +533,7 @@ function ejecutar(descargar){
 	 if ((urlXmlOutput != null) && (!urlXmlOutput.trim().equals("")))
 	 {
 	 outData = new FileOutputStream(urlXmlOutput);
-	 StreamUtil.copy(localBufferedInputStream, outData);
+	 copyStream(localBufferedInputStream, outData);
 	 outData.close();
 	 }
 	 
@@ -562,6 +561,34 @@ function ejecutar(descargar){
 			}  
 	 }
 	 }
+%>
+
+<%!
+  private static void copyStream(InputStream in, OutputStream out)
+    throws IOException
+  {
+    byte[] bloque = new byte[10000];
+    try
+    {
+      while (true) {
+        int leido = in.read(bloque, 0, 10000);
+        if (leido == -1) {
+          break;
+        }
+        out.write(bloque, 0, leido);
+      }
+    }
+    catch (IOException e) {
+      throw e;
+    } finally {
+      if (in != null) try { in.close(); } catch (IOException e) {
+        } if (out != null) try { out.close();
+        }
+        catch (IOException e)
+        {
+        }
+    }
+  }
 %>
 
 <%!
